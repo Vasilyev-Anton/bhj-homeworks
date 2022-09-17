@@ -1,6 +1,4 @@
-const img = document.getElementById("cookie"),
-    count = document.getElementById("clicker__counter");
-img.onclick = () => {
-    +count.textContent++;
-    count.textContent % 2 !== 0 ? img.width +=20 : img.width -=20;
-};
+const num = document.getElementById("timer");
+let timer = setInterval (() => {
+    num.textContent = num.textContent > 0 ? num.textContent - 1 : (alert("Вы победили в конкурсе!"), clearInterval(timer));   
+}, 500);
