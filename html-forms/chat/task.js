@@ -5,9 +5,9 @@ const messages = document.getElementById('chat-widget__messages');
 const input = document.querySelector('.chat-widget__input');
 let container = document.querySelector('.chat-widget__messages-container');
 
-chatWidget.addEventListener('click', () => {
-  chatWidget.classList.add('chat-widget_active');
-});
+chatWidget.addEventListener('click', () =>
+  chatWidget.classList.add('chat-widget_active')
+);
 
 const robotMessages = [
   'Добрый день, мы ещё не проснулись. Позвоните через 10 лет',
@@ -21,7 +21,7 @@ const robotMessages = [
 ];
 
 const robotMsg = () => 
-    robotMessages[Math.floor(Math.random() * robotMessages.length)];
+  robotMessages[Math.floor(Math.random() * robotMessages.length)];
 
 const sendMsg = (text) => {
   const date = new Date().toTimeString().substring(0, 5);
